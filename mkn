@@ -1,0 +1,17 @@
+#!/bin/bash
+# MirrorKNight
+#
+#
+# Program capable of running multiple instances of LAPP in paralel
+# 
+# $1 -> commands
+# $@ -> DOCKER IMAGES
+#
+#
+SCRIPT=$1
+shift
+for ARG in "$@"
+do
+./lapp $ARG:v1  "$SCRIPT" &
+done
+wait

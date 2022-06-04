@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+# either reads or creates todo list
+#
+#
+if test -f "./todo"; then
+cat todo
+else
+vim todo
+fi
