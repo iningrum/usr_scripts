@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+# a simple program that runs one DOCKER container
+# 
+# PARAMS:
+#     $1 -> image name
+#     $2 -> commands
+# 
+#
+docker run --rm $1 /bin/bash -c "$2" >/dev/null
