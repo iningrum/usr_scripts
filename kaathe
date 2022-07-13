@@ -1,0 +1,10 @@
+#/!bin/bash
+input=$1
+target=$2
+echo $input $target
+cd $target
+while IFS= read -r line
+do
+yt-dlp $line
+done < $input
+

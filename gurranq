@@ -1,0 +1,9 @@
+#!/bin/bash
+input=~/tarnished
+while IFS= read -r line
+do
+IFS=' ' read -ra my_array <<< "$line"
+echo $line
+echo ${my_array[0]}
+bash /home/iningrum/scripts/usr_scripts/kaathe ${my_array[0]} ${my_array[1]}
+done < $input
