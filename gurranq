@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo mount -t drvfs d: /mnt/d
 input=~/tarnished
 while IFS= read -r line
 do
